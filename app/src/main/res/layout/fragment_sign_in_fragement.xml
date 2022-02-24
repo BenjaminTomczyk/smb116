@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auth.SignInFragement">
+    tools:context=".Auth.SignInFragement"
+    android:id="@+id/signin_fragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -25,7 +26,6 @@
         android:layout_height="48dp"
         android:layout_marginTop="280dp"
         android:hint="@string/password"
-        android:onClick="onClick"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

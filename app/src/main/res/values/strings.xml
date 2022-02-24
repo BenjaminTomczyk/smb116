@@ -6,4 +6,6 @@
     <string name="identifiant">Identifiant</string>
     <string name="password">Mot de passe</string>
     <string name="signup"><u>Créer un compte</u></string>
+    <string name="signin"><u>Deja membre</u></string>
+    <string name="inscription">Inscription</string>
 </resources>

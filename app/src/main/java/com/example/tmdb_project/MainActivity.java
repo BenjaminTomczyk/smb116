@@ -1,6 +1,8 @@
 package com.example.tmdb_project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,14 +11,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tmdb_project.Auth.SignInFragement;
+import com.example.tmdb_project.Auth.SignUpFragement;
+
 import java.io.Console;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView signUpLink;
+    private TextView link;
     private Button connexion_btn;
     private EditText id_txt;
     private EditText password_txt;
+    private Fragment activeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +34,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
-        signUpLink = (TextView) findViewById(R.id.signup_label);
-        connexion_btn = (Button) findViewById(R.id.connexion_btn);
-        id_txt = (EditText) findViewById(R.id.id_txt);
-        password_txt = (EditText) findViewById(R.id.password_txt);
+        Toast.makeText(getApplicationContext(), "START", Toast.LENGTH_SHORT).show();
+    }
 
-        signUpLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                if(view == signUpLink){
-                    Toast.makeText(getApplicationContext(), "TEST", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "RESUME", Toast.LENGTH_SHORT).show();
     }
 }
