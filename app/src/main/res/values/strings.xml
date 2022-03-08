@@ -8,4 +8,5 @@
     <string name="signup"><u>Créer un compte</u></string>
     <string name="signin"><u>Deja membre</u></string>
     <string name="inscription">Inscription</string>
+    <string name="trends_title">TENDENCES ACTUELLES</string>
 </resources>
