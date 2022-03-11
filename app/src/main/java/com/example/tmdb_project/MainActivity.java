@@ -3,6 +3,8 @@ package com.example.tmdb_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,10 @@ import java.io.Console;
 
 public class MainActivity extends AppCompatActivity {
 
+    RecyclerView trendingRecyclerView;
+    private String s1[], s2[];
+    private int image[] = {};
+
     private TextView link;
     private Button connexion_btn;
     private EditText id_txt;
@@ -27,7 +33,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_trending_page_fragment);
+
+        //Setup recyclerVsiew de la page trending
+        trendingRecyclerView = findViewById(R.id.trending_recycler_view);
+        s1 = getResources().getStringArray(R.array.recyclerView_title);
+        s2 = getResources().getStringArray(R.array.recyclerView_date_sortie);
+        TrendingAdapter trendingAdapter = new TrendingAdapter(this,s1,s2/*,image*/);
+        trendingRecyclerView.setAdapter(trendingAdapter);
+        trendingRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
     @Override

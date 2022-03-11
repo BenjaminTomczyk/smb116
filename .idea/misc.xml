@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/fragment_sign_up_fragement.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_trending_fragment.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_trending_page_fragment.xml" value="0.19798889160156252" />
+        <entry key="app/src/main/res/layout/trending_recycler_view_item.xml" value="0.37772437938745473" />
       </map>
     </option>
   </component>
