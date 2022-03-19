@@ -3,7 +3,9 @@ package com.example.tmdb_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,8 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.tmdb_project.Auth.SignInFragement;
-import com.example.tmdb_project.Auth.SignUpFragement;
+import com.example.tmdb_project.Data.AppDatabase;
 
 import java.io.Console;
 
@@ -34,12 +35,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
-        Toast.makeText(getApplicationContext(), "START", Toast.LENGTH_SHORT).show();
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "smb116_db").build();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(getApplicationContext(), "RESUME", Toast.LENGTH_SHORT).show();
     }
 }

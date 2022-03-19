@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="connexion">Connexion</string>
-    <string name="identifiant">Identifiant</string>
+    <string name="email">Email</string>
     <string name="password">Mot de passe</string>
     <string name="signup"><u>Créer un compte</u></string>
     <string name="signin"><u>Deja membre</u></string>

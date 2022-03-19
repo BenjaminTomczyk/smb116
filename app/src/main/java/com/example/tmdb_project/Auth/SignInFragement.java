@@ -3,13 +3,16 @@ package com.example.tmdb_project.Auth;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tmdb_project.Data.AppDatabase;
 import com.example.tmdb_project.R;
 
 /**
@@ -29,6 +32,12 @@ public class SignInFragement extends Fragment {
     private String mParam2;
 
     private TextView link;
+    private TextView emailInput;
+    private TextView passwordInput;
+    private Button btnConnec;
+
+    private AppDatabase db;
+
 
     public SignInFragement() {
         super(R.layout.fragment_sign_in_fragement);
@@ -69,17 +78,51 @@ public class SignInFragement extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_sign_in_fragement, container, false);
         link = (TextView) view.findViewById(R.id.signup_label);
+        emailInput = view.findViewById(R.id.id_txt);
+        passwordInput = view.findViewById(R.id.password_txt);
+        btnConnec = (Button) view.findViewById(R.id.connexion_btn);
+
+        db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
+
+
+        Bundle args = getArguments();
+
+        if(args != null){
+            System.out.println(args.getString("email"));
+            System.out.println(args.getString("password"));
+
+            emailInput.setText(args.getString("email"));
+            passwordInput.setText(args.getString("password"));
+        }
 
         link.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity().getApplicationContext(), "START", Toast.LENGTH_SHORT).show();
-
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .setReorderingAllowed(true)
                         .replace(R.id.fragment_container_view_auth, SignUpFragement.class, null)
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        btnConnec.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                if(emailInput.getText().toString() != "" && passwordInput.getText().toString() != ""){
+                    Integer userExist = db.userDao().checkUser(emailInput.getText().toString(), passwordInput.getText().toString());
+
+                    if(userExist > 0){
+                        Toast.makeText(getActivity().getApplicationContext(), "Le compte existe !", Toast.LENGTH_SHORT).show();
+                        //TODO Redirect connexion.
+                    }
+                    else {
+                        Toast.makeText(getActivity().getApplicationContext(), "Les informations de connexion sont invalides.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else {
+                    Toast.makeText(getActivity().getApplicationContext(), "Merci de renseigner une adresse email et un mot de passe pour vous connecter.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
