@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_profil.xml" value="0.19202898550724637" />
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_sign_in_fragement.xml" value="0.2056159420289855" />
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_sign_up_fragement.xml" value="0.2056159420289855" />
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_trending_page_fragment.xml" value="0.2056159420289855" />
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/trending_recycler_view_item.xml" value="0.2056159420289855" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12208713272543059" />
+        <entry key="app/src/main/res/layout/fragment_sign_in_fragement.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_fragement.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/fragment_trending_fragment.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/fragment_trending_page_fragment.xml" value="0.19798889160156252" />
+        <entry key="app/src/main/res/layout/trending_recycler_view_item.xml" value="0.37772437938745473" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

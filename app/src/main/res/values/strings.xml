@@ -8,4 +8,32 @@
     <string name="signup"><u>Créer un compte</u></string>
     <string name="signin"><u>Deja membre</u></string>
     <string name="inscription">Inscription</string>
+    <string name="trends_title">TENDENCES ACTUELLES</string>
+
+    <!--Valeurs test pour la recyclerView de la page Trending-->
+    <string-array name="recyclerView_title">
+        <item>ITEM1</item>
+        <item>ITEM2</item>
+        <item>ITEM3</item>
+        <item>ITEM4</item>
+        <item>ITEM5</item>
+        <item>ITEM6</item>
+        <item>ITEM7</item>
+        <item>ITEM8</item>
+        <item>ITEM9</item>
+        <item>ITEM10</item>
+    </string-array>
+
+    <string-array name="recyclerView_date_sortie">
+        <item>ITEM1-DESC</item>
+        <item>ITEM2-DESC</item>
+        <item>ITEM3-DESC</item>
+        <item>ITEM4-DESC</item>
+        <item>ITEM5-DESC</item>
+        <item>ITEM6-DESC</item>
+        <item>ITEM7-DESC</item>
+        <item>ITEM8-DESC</item>
+        <item>ITEM9-DESC</item>
+        <item>ITEM10-DESC</item>
+    </string-array>
 </resources>
