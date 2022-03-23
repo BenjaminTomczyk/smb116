@@ -1,7 +1,5 @@
 package com.example.tmdb_project.Auth;
 
-import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
-
 import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;

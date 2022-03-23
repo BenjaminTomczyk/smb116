@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+array recyclerView_date_sortie
+array recyclerView_title
 color black
 color link
 color purple_200
@@ -10,6 +12,12 @@ color teal_700
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id B_choose_picture
+id B_save_password
+id B_take_picture
+id ET_password
+id ET_password_confirm
+id IV_avatar
 id connexion_btn
 id connexion_btn_signup
 id date_picker
@@ -18,13 +26,22 @@ id fragment_container_view_auth
 id id_txt
 id password_txt
 id password_txt_signup
+id recycler_date_sortie
+id recycler_image
+id recycler_title
 id signin_fragment
 id signin_label
 id signup_fragment
 id signup_label
+id trending_recycler_view
+id trending_search_view
+id trending_title
 layout activity_main
+layout fragment_profil
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
+layout fragment_trending_page_fragment
+layout trending_recycler_view_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
@@ -35,4 +52,5 @@ string inscription
 string password
 string signin
 string signup
+string trends_title
 style Theme.Tmdb_project
