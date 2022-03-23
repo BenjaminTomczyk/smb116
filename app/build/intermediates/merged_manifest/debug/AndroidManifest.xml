@@ -27,6 +27,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Tmdb_project" >
         <activity
+            android:name="com.example.tmdb_project.AppActivity"
+            android:exported="false"
+            android:label="@string/title_activity_app" />
+        <activity
             android:name="com.example.tmdb_project.MainActivity"
             android:exported="true" >
             <intent-filter>

@@ -40,7 +40,7 @@ public class UserProfileFragment extends Fragment{
     private static final int CHOOSE_PICTURE = 2;
 
     public UserProfileFragment() {
-        super(R.layout.fragment_profil);
+        super(R.layout.fragment_profil_bis);
         // Required empty public constructor
     }
 
@@ -73,7 +73,7 @@ public class UserProfileFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_profil, container, false);
+        View view = inflater.inflate(R.layout.fragment_profil_bis, container, false);
 
         B_take_picture = view.findViewById(R.id.B_take_picture);
         B_choose_picture = view.findViewById(R.id.B_choose_picture);

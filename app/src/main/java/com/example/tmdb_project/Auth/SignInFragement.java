@@ -1,5 +1,6 @@
 package com.example.tmdb_project.Auth;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,7 +13,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tmdb_project.AppActivity;
+import com.example.tmdb_project.ContentActivity;
 import com.example.tmdb_project.Data.AppDatabase;
+import com.example.tmdb_project.MainActivity;
 import com.example.tmdb_project.R;
 
 /**
@@ -114,7 +118,11 @@ public class SignInFragement extends Fragment {
 
                     if(userExist > 0){
                         Toast.makeText(getActivity().getApplicationContext(), "Le compte existe !", Toast.LENGTH_SHORT).show();
-                        //TODO Redirect connexion.
+
+                        //TODO : Connection
+                        Intent contentIntent = new Intent(getActivity(), AppActivity.class);
+                        startActivity(contentIntent);
+
                     }
                     else {
                         Toast.makeText(getActivity().getApplicationContext(), "Les informations de connexion sont invalides.", Toast.LENGTH_SHORT).show();

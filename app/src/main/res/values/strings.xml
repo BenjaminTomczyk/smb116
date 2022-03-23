@@ -9,6 +9,12 @@
     <string name="signin"><u>Deja membre</u></string>
     <string name="inscription">Inscription</string>
     <string name="trends_title">TENDENCES ACTUELLES</string>
+    <string name="take_picture">Prendre une photo</string>
+    <string name="choose_picture">Choisir une photo</string>
+    <string name="new_password">Nouveau mot de passe</string>
+    <string name="confirm_new_password">Confirmation nouveau mot de passe</string>
+    <string name="save">Sauvegarder</string>
+    <string name="change_password">Changer de mot de passe</string>
 
     <!--Valeurs test pour la recyclerView de la page Trending-->
     <string-array name="recyclerView_title">
@@ -36,4 +42,8 @@
         <item>ITEM9-DESC</item>
         <item>ITEM10-DESC</item>
     </string-array>
+    <string name="title_activity_app">AppActivity</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_watchlist">Watchlist</string>
+    <string name="title_profil">Profil</string>
 </resources>
