@@ -100,8 +100,17 @@
         "source": "D:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\src\\main\\res\\layout\\fragment_sign_up_fragement.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "D:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "D:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+=======
+        "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_smb116.png.flat",
+        "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\smb116.png"
+    },
+    {
+        "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_app.xml.flat",
+        "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\layout\\activity_app.xml"
+>>>>>>> 484bdd9f43389203453f5d0c6776cad1ec356efc
     },
     {
         "merged": "D:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",

@@ -25,6 +25,9 @@
         <item>ITEM10</item>
     </string-array>
     <color name="black">#FF000000</color>
+    <color name="blue1">#0D0F45</color>
+    <color name="blue2">#252657</color>
+    <color name="blue3">#3d3e6a</color>
     <color name="link">#429ef5</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -55,8 +58,13 @@
     <string name="trends_title">TENDENCES ACTUELLES</string>
     <style name="Theme.Tmdb_project" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
+<<<<<<< HEAD
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
+=======
+        <item name="colorPrimary">@color/blue1</item>
+        <item name="colorPrimaryVariant">@color/blue2</item>
+>>>>>>> 484bdd9f43389203453f5d0c6776cad1ec356efc
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

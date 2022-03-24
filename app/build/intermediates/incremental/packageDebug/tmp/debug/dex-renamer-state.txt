@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 #Thu Mar 24 11:38:59 CET 2022
 path.4=1/classes.dex
 path.3=15/classes.dex
 path.2=14/classes.dex
+=======
+#Thu Mar 24 11:39:55 CET 2022
+path.4=classes2.dex
+path.3=8/classes.dex
+path.2=2/classes.dex
+>>>>>>> 484bdd9f43389203453f5d0c6776cad1ec356efc
 path.1=0/classes.dex
 renamed.8=classes9.dex
 path.8=classes2.dex

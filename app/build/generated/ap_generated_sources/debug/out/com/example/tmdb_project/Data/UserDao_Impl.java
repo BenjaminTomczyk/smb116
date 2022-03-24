@@ -1,6 +1,7 @@
 package com.example.tmdb_project.Data;
 
 import android.database.Cursor;
+import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
@@ -22,6 +23,8 @@ public final class UserDao_Impl implements UserDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<User> __insertionAdapterOfUser;
+
+  private final EntityDeletionOrUpdateAdapter<User> __updateAdapterOfUser;
 
   public UserDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -50,6 +53,36 @@ public final class UserDao_Impl implements UserDao {
         }
       }
     };
+    this.__updateAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
+      @Override
+      public String createQuery() {
+        return "UPDATE OR ABORT `user` SET `email` = ?,`password` = ?,`birthdate` = ? WHERE `email` = ?";
+      }
+
+      @Override
+      public void bind(SupportSQLiteStatement stmt, User value) {
+        if (value.getEmail() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindString(1, value.getEmail());
+        }
+        if (value.getPassword() == null) {
+          stmt.bindNull(2);
+        } else {
+          stmt.bindString(2, value.getPassword());
+        }
+        if (value.getBirthdate() == null) {
+          stmt.bindNull(3);
+        } else {
+          stmt.bindLong(3, value.getBirthdate());
+        }
+        if (value.getEmail() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getEmail());
+        }
+      }
+    };
   }
 
   @Override
@@ -58,6 +91,18 @@ public final class UserDao_Impl implements UserDao {
     __db.beginTransaction();
     try {
       __insertionAdapterOfUser.insert(user);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void updateUser(final User user) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __updateAdapterOfUser.handle(user);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
