@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.room.Room;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
@@ -41,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "smb116_db").build();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
     }
 
     @Override

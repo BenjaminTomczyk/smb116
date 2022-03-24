@@ -100,6 +100,10 @@
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\layout\\fragment_trending.xml"
     },
     {
+        "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_smb116.png.flat",
+        "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\smb116.png"
+    },
+    {
         "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_app.xml.flat",
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\layout\\activity_app.xml"
     },

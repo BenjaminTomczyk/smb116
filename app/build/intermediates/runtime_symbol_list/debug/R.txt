@@ -1257,6 +1257,9 @@ int color background_floating_material_light 0x7f06001e
 int color background_material_dark 0x7f06001f
 int color background_material_light 0x7f060020
 int color black 0x7f060021
+int color blue1 0x7f0600fa
+int color blue2 0x7f0600fb
+int color blue3 0x7f0600fc
 int color bright_foreground_disabled_material_dark 0x7f060022
 int color bright_foreground_disabled_material_light 0x7f060023
 int color bright_foreground_inverse_material_dark 0x7f060024
@@ -2243,6 +2246,7 @@ int drawable notification_template_icon_low_bg 0x7f0800bd
 int drawable notification_tile_bg 0x7f0800be
 int drawable notify_panel_notification_icon_bg 0x7f0800bf
 int drawable preference_list_divider_material 0x7f0800c0
+int drawable smb116 0x7f0800c7
 int drawable test_custom_background 0x7f0800c1
 int drawable tooltip_frame_dark 0x7f0800c2
 int drawable tooltip_frame_light 0x7f0800c3
@@ -2576,6 +2580,8 @@ int id ifRoom 0x7f090146
 int id ignore 0x7f090147
 int id ignoreRequest 0x7f090148
 int id image 0x7f090149
+int id imageView 0x7f09027a
+int id imageView2 0x7f09027b
 int id immediateStop 0x7f09014a
 int id included 0x7f09014b
 int id info 0x7f09014c

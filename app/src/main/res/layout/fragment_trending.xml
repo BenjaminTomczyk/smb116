@@ -25,10 +25,11 @@
         android:id="@+id/trending_search_view"
         android:layout_width="415dp"
         android:layout_height="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/trending_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trending_title"
-        app:layout_constraintBottom_toTopOf="@+id/trending_recycler_view"/>
+        app:layout_constraintTop_toBottomOf="@+id/trending_title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/trending_recycler_view"

@@ -3,6 +3,9 @@ local
 array recyclerView_date_sortie
 array recyclerView_title
 color black
+color blue1
+color blue2
+color blue3
 color link
 color purple_200
 color purple_500
@@ -17,6 +20,7 @@ drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
+drawable smb116
 id B_choose_picture
 id B_save_password
 id B_take_picture
@@ -30,6 +34,8 @@ id date_picker
 id email_txt_signup
 id fragment_container_view_auth
 id id_txt
+id imageView
+id imageView2
 id mobile_navigation
 id nav_host_fragment_activity_app
 id nav_view

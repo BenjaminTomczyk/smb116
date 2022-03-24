@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -17,6 +18,9 @@ public interface UserDao {
 
     @Query("SELECT Count(*) FROM User WHERE email = :email AND password = :password")
     Integer checkUser(String email, String password);
+
+    @Update
+    void updateUser(User user);
 
     @Insert
     void insertUser(User user);
