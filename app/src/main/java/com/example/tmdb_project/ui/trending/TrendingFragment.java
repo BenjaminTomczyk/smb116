@@ -1,5 +1,6 @@
 package com.example.tmdb_project.ui.trending;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +23,15 @@ public class TrendingFragment extends Fragment {
     private RecyclerView trendingRecyclerView;
     private String s1[], s2[];
     private int image[] = {};
+    Context context;
 
     public TrendingFragment(){
         super(R.layout.fragment_trending);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -35,14 +42,16 @@ public class TrendingFragment extends Fragment {
         binding = FragmentTrendingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        View view = inflater.inflate(R.layout.fragment_profil, container, false);
+        context = container.getContext();
+
+        View view = inflater.inflate(R.layout.fragment_trending, container, false);
 
         trendingRecyclerView = view.findViewById(R.id.trending_recycler_view);
         s1 = getResources().getStringArray(R.array.recyclerView_title);
         s2 = getResources().getStringArray(R.array.recyclerView_date_sortie);
-        TrendingAdapter trendingAdapter = new TrendingAdapter(container.getContext(),s1,s2/*,image*/);
+        TrendingAdapter trendingAdapter = new TrendingAdapter(context,s1,s2/*,image*/);
         trendingRecyclerView.setAdapter(trendingAdapter);
-        trendingRecyclerView.setLayoutManager(new LinearLayoutManager(container.getContext()));
+        trendingRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
         return root;
     }

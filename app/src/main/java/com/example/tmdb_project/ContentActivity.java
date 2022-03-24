@@ -25,5 +25,4 @@ public class ContentActivity extends AppCompatActivity {
         trendingRecyclerView.setAdapter(trendingAdapter);
         trendingRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
 }
