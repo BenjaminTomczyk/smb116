@@ -17,7 +17,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.room.Room;
 
+import com.example.tmdb_project.Data.AppDatabase;
+import com.example.tmdb_project.Data.User;
 import com.example.tmdb_project.R;
 import com.example.tmdb_project.databinding.FragmentProfilBinding;
 
@@ -37,6 +40,8 @@ public class ProfilFragment extends Fragment {
     private static final int TAKE_PICTURE = 1;
     private static final int CHOOSE_PICTURE = 2;
 
+    private AppDatabase db;
+
     public ProfilFragment(){
         super(R.layout.fragment_profil);
     }
@@ -49,7 +54,13 @@ public class ProfilFragment extends Fragment {
         binding = FragmentProfilBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        View view = inflater.inflate(R.layout.fragment_profil, container, false);
+        //View view = inflater.inflate(R.layout.fragment_profil, container, false);
+        return root;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         b_take_picture = view.findViewById(R.id.B_take_picture);
         b_choose_picture = view.findViewById(R.id.B_choose_picture);
@@ -84,24 +95,28 @@ public class ProfilFragment extends Fragment {
                         && et_password.getText().length() > 0
                         && et_password_confirm.getText().length() > 0
                         && et_password == et_password_confirm){
+
+                    //db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
+                    //db.
+                    //User user = db.userDao().loadByEmail(email);
+                    //db.userDao().updateUser(user);
                     //@TODO change password
                 }
             }
         });
-
-        return root;
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        if(requestCode == TAKE_PICTURE && resultCode == getActivity().RESULT_OK) {
+        if(requestCode == TAKE_PICTURE) {
             super.onActivityResult(requestCode, resultCode, data);
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             iv_avatar.setImageBitmap(photo);
         }
 
-        if(requestCode == CHOOSE_PICTURE && resultCode == getActivity().RESULT_OK) {
+        //if(requestCode == CHOOSE_PICTURE && resultCode == getActivity().RESULT_OK) {
+        if(requestCode == CHOOSE_PICTURE) {
             ImageUrl = data.getData();
             try{
                 Bitmap photo = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), ImageUrl);

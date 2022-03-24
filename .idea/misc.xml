@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_profil.xml" value="0.19202898550724637" />
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_profil.xml" value="0.2" />
+        <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_profil_bis.xml" value="0.16" />
         <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_sign_in_fragement.xml" value="0.2056159420289855" />
         <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_sign_up_fragement.xml" value="0.2056159420289855" />
         <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/fragment_trending_page_fragment.xml" value="0.2056159420289855" />
