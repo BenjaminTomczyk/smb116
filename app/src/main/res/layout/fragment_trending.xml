@@ -10,7 +10,7 @@
         android:id="@+id/trending_title"
         android:layout_width="408dp"
         android:layout_height="62dp"
-        android:background="@color/purple_500"
+        android:background="@color/blue1"
         android:text="@string/trends_title"
         android:textAlignment="center"
         android:gravity="center"

@@ -118,8 +118,6 @@ public class SignInFragement extends Fragment {
                     Integer userExist = db.userDao().checkUser(emailInput.getText().toString(), passwordInput.getText().toString());
 
                     if(userExist > 0){
-                        Toast.makeText(getActivity().getApplicationContext(), "Le compte existe !", Toast.LENGTH_SHORT).show();
-
                         SharedPreferences pref = getActivity().getApplicationContext().getSharedPreferences("MyPref", 0);
                         SharedPreferences.Editor editor = pref.edit();
 
