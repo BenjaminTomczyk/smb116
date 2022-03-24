@@ -2202,6 +2202,9 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_arrow_down_24dp
+drawable ic_baseline_movie_24
+drawable ic_baseline_people_24
+drawable ic_baseline_trending_up_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
@@ -2251,6 +2254,7 @@ drawable smb116
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable trending_icon
 id ALT
 id BOTTOM_END
 id BOTTOM_START

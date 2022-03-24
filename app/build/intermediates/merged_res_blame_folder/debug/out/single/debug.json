@@ -24,6 +24,10 @@
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\layout\\fragment_trending_page_fragment.xml"
     },
     {
+        "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_trending_icon.xml.flat",
+        "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\trending_icon.xml"
+    },
+    {
         "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -68,6 +72,10 @@
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
     },
     {
+        "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_trending_up_24.xml.flat",
+        "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\ic_baseline_trending_up_24.xml"
+    },
+    {
         "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
@@ -100,8 +108,16 @@
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\layout\\fragment_trending.xml"
     },
     {
+        "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_people_24.xml.flat",
+        "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\ic_baseline_people_24.xml"
+    },
+    {
         "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_smb116.png.flat",
         "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\smb116.png"
+    },
+    {
+        "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_movie_24.xml.flat",
+        "source": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\src\\main\\res\\drawable\\ic_baseline_movie_24.xml"
     },
     {
         "merged": "E:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_app.xml.flat",
