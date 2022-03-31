@@ -2859,7 +2859,6 @@ id transition_scene_layoutid_cache
 id transition_transform
 id trending_recycler_view
 id trending_search_view
-id trending_title
 id triangle
 id unchecked
 id uniform
@@ -3030,7 +3029,6 @@ layout fragment_profil_bis
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
 layout fragment_trending
-layout fragment_trending_page_fragment
 layout fragment_watching
 layout image_frame
 layout material_chip_input_combo
@@ -3281,6 +3279,7 @@ string title_activity_app
 string title_profil
 string title_trending
 string title_watchlist
+string trending_searchbar_hint
 string trends_title
 string v7_preference_off
 string v7_preference_on

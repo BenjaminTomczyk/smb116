@@ -15,9 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tmdb_project.AppActivity;
-import com.example.tmdb_project.ContentActivity;
 import com.example.tmdb_project.Data.AppDatabase;
-import com.example.tmdb_project.MainActivity;
 import com.example.tmdb_project.R;
 
 /**

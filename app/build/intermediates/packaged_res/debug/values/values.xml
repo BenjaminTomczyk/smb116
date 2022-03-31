@@ -55,6 +55,7 @@
     <string name="title_profil">Profil</string>
     <string name="title_trending">Trending</string>
     <string name="title_watchlist">Watchlist</string>
+    <string name="trending_searchbar_hint">SEARCH</string>
     <string name="trends_title">TENDENCES ACTUELLES</string>
     <style name="Theme.Tmdb_project" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->

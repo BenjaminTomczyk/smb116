@@ -1,7 +1,6 @@
 package com.example.tmdb_project;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendViewHolder> {
@@ -18,8 +16,7 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
     int img[];
     Context context;
 
-    public TrendingAdapter(Context ct, String s1[], String s2[]/*, int image[]*/){
-        context = ct;
+    public TrendingAdapter(String s1[], String s2[]/*, int image[]*/){
         data_title = s1;
         data_date = s2;
         //img = image;
@@ -27,14 +24,14 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
 
     @NonNull
     @Override
-    public TrendingAdapter.TrendViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
+    public TrendViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.trending_recycler_view_item, parent, false);
         return new TrendViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TrendingAdapter.TrendViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TrendViewHolder holder, int position) {
         holder.txt_title.setText(data_title[position]);
         holder.txt_date_sortie.setText(data_date[position]);
         //holder.img_miniature.setImageResource(img[position]);

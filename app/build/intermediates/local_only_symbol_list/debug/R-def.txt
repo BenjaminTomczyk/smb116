@@ -59,7 +59,6 @@ id textView
 id text_watching
 id trending_recycler_view
 id trending_search_view
-id trending_title
 layout activity_app
 layout activity_main
 layout fragment_profil
@@ -67,7 +66,6 @@ layout fragment_profil_bis
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
 layout fragment_trending
-layout fragment_trending_page_fragment
 layout fragment_watching
 layout trending_recycler_view_item
 menu bottom_nav_menu
@@ -92,5 +90,6 @@ string title_activity_app
 string title_profil
 string title_trending
 string title_watchlist
+string trending_searchbar_hint
 string trends_title
 style Theme.Tmdb_project
