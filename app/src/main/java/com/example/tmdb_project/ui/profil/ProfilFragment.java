@@ -96,8 +96,7 @@ public class ProfilFragment extends Fragment {
                 Toast toast = Toast.makeText(getActivity(), "Le mot de passe a bien été modifié", Toast.LENGTH_SHORT);
                 if(et_password != null && et_password_confirm != null){
                     if(et_password.getText().length() > 8 && et_password_confirm.getText().length() > 8){
-                        if(et_password.getText().toString() == et_password_confirm.getText().toString()) {
-
+                        if(et_password.getText().toString().equals(et_password_confirm.getText().toString())) {
                             db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
 
                             User user = db.userDao().loadByEmail(
@@ -106,19 +105,16 @@ public class ProfilFragment extends Fragment {
                             db.userDao().updateUser(user);
                             et_password.setText("");
                             et_password_confirm.setText("");
-                            toast.setText("");
-                            toast.show();
                         }
                         else{
                             toast.setText("Les mots de passe de concordent pas");
-                            toast.show();
                         }
                     }
                     else{
                         toast.setText("Le mot de passe doit faire plus de 8 caractères");
-                        toast.show();
                     }
                 }
+                toast.show();
             }
         });
     }
