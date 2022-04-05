@@ -62,7 +62,6 @@ id trending_search_view
 layout activity_app
 layout activity_main
 layout fragment_profil
-layout fragment_profil_bis
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
 layout fragment_trending
