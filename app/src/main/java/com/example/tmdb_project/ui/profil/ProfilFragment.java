@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
+import com.example.tmdb_project.AppActivity;
 import com.example.tmdb_project.Data.AppDatabase;
 import com.example.tmdb_project.Data.User;
 import com.example.tmdb_project.R;
@@ -96,10 +97,10 @@ public class ProfilFragment extends Fragment {
                         && et_password_confirm.getText().length() > 0
                         && et_password == et_password_confirm){
 
-                    //db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
-                    //db.
-                    //User user = db.userDao().loadByEmail(email);
-                    //db.userDao().updateUser(user);
+                    db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
+
+                    User user = db.userDao().loadByEmail((AppActivity)getActivity().ema );
+                    db.userDao().updateUser(user);
                     //@TODO change password
                 }
             }
