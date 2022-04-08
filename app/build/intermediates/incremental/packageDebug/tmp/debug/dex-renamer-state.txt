@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-#Fri Apr 08 13:05:42 CEST 2022
-path.4=15/classes.dex
-path.3=14/classes.dex
-path.2=1/classes.dex
-=======
-#Tue Apr 05 15:49:48 CEST 2022
+#Sat Apr 09 01:04:38 CEST 2022
 path.4=1/classes.dex
 path.3=15/classes.dex
 path.2=14/classes.dex
->>>>>>> d7c53ae84ae3bc6c2a6446a9de90ed72d316abc9
+renamed.9=classes10.dex
 path.1=0/classes.dex
 renamed.8=classes9.dex
 path.8=classes2.dex
@@ -16,20 +10,22 @@ path.7=8/classes.dex
 path.6=4/classes.dex
 path.5=2/classes.dex
 path.0=classes.dex
-base.4=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.3=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.2=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.1=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.4=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.3=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.2=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.1=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+base.9=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+path.9=5/classes.dex
 renamed.7=classes8.dex
-base.8=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.8=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 renamed.6=classes7.dex
-base.7=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.7=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
 renamed.5=classes6.dex
-base.6=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.6=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 renamed.4=classes5.dex
-base.5=D\:\\COURS\\M1\\SMB116 Projet\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.5=E\:\\Cours\\Cours M1\\Mobile\\smb116\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex

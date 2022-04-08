@@ -52,6 +52,10 @@
             android:exported="true"
             android:process="@string/car_ui_installer_process_name"
             android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" />
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.tmdb_project.com.squareup.picasso"
+            android:exported="false" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"
