@@ -17,6 +17,7 @@ MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/benjamin/.gradle/c
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.4.1] /Users/benjamin/.gradle/caches/transforms-3/6d3cb6833931ece3bec4e593eae52aa5/transformed/lifecycle-livedata-ktx-2.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1] /Users/benjamin/.gradle/caches/transforms-3/487212f7dd914b3bbbc745d2706c5083/transformed/lifecycle-viewmodel-ktx-2.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] /Users/benjamin/.gradle/caches/transforms-3/5434a7c76540822a022ce445ed636194/transformed/navigation-fragment-2.3.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.volley:volley:1.2.1] /Users/benjamin/.gradle/caches/transforms-3/1ba7878969b21f5273488f5327df26c4/transformed/volley-1.2.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.room:room-rxjava2:2.4.2] /Users/benjamin/.gradle/caches/transforms-3/49524f2c6bac524a1fdf9f44a7a843f5/transformed/room-rxjava2-2.4.2/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-rxjava3:2.4.2] /Users/benjamin/.gradle/caches/transforms-3/cdf8e791dd1ce637fe71df6716a2d373/transformed/room-rxjava3-2.4.2/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-guava:2.4.2] /Users/benjamin/.gradle/caches/transforms-3/fb6169258c605e5414fcbc8b51b94165/transformed/room-guava-2.4.2/AndroidManifest.xml:17:1-24:12
@@ -167,6 +168,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1] /Users/benjamin/.
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1] /Users/benjamin/.gradle/caches/transforms-3/487212f7dd914b3bbbc745d2706c5083/transformed/lifecycle-viewmodel-ktx-2.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] /Users/benjamin/.gradle/caches/transforms-3/5434a7c76540822a022ce445ed636194/transformed/navigation-fragment-2.3.5/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] /Users/benjamin/.gradle/caches/transforms-3/5434a7c76540822a022ce445ed636194/transformed/navigation-fragment-2.3.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.volley:volley:1.2.1] /Users/benjamin/.gradle/caches/transforms-3/1ba7878969b21f5273488f5327df26c4/transformed/volley-1.2.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] /Users/benjamin/.gradle/caches/transforms-3/1ba7878969b21f5273488f5327df26c4/transformed/volley-1.2.1/AndroidManifest.xml:5:5-43
 MERGED from [androidx.room:room-rxjava2:2.4.2] /Users/benjamin/.gradle/caches/transforms-3/49524f2c6bac524a1fdf9f44a7a843f5/transformed/room-rxjava2-2.4.2/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-rxjava2:2.4.2] /Users/benjamin/.gradle/caches/transforms-3/49524f2c6bac524a1fdf9f44a7a843f5/transformed/room-rxjava2-2.4.2/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-rxjava3:2.4.2] /Users/benjamin/.gradle/caches/transforms-3/cdf8e791dd1ce637fe71df6716a2d373/transformed/room-rxjava3-2.4.2/AndroidManifest.xml:20:5-22:41
