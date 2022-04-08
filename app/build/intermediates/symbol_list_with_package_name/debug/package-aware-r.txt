@@ -3025,7 +3025,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
 layout fragment_profil
-layout fragment_profil_bis
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
 layout fragment_trending

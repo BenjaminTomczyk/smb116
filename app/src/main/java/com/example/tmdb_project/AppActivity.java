@@ -20,7 +20,7 @@ import com.example.tmdb_project.databinding.ActivityAppBinding;
 public class AppActivity extends AppCompatActivity {
 
     private ActivityAppBinding binding;
-    private String email;
+    private static String email;
     private String password;
     AppDatabase db;
 

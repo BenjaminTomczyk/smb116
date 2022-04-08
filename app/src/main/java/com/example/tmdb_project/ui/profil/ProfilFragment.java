@@ -1,6 +1,7 @@
 package com.example.tmdb_project.ui.profil;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +21,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
+import com.example.tmdb_project.AppActivity;
 import com.example.tmdb_project.Data.AppDatabase;
 import com.example.tmdb_project.Data.User;
 import com.example.tmdb_project.R;
@@ -90,18 +93,28 @@ public class ProfilFragment extends Fragment {
         b_save_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(et_password != null
-                        && et_password_confirm != null
-                        && et_password.getText().length() > 0
-                        && et_password_confirm.getText().length() > 0
-                        && et_password == et_password_confirm){
+                Toast toast = Toast.makeText(getActivity(), "Le mot de passe a bien été modifié", Toast.LENGTH_SHORT);
+                if(et_password != null && et_password_confirm != null){
+                    if(et_password.getText().length() > 8 && et_password_confirm.getText().length() > 8){
+                        if(et_password.getText().toString().equals(et_password_confirm.getText().toString())) {
+                            db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
 
-                    //db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
-                    //db.
-                    //User user = db.userDao().loadByEmail(email);
-                    //db.userDao().updateUser(user);
-                    //@TODO change password
+                            User user = db.userDao().loadByEmail(
+                                    getActivity().getSharedPreferences("MyPref", 0).getString("email", null));
+                            user.setPassword(et_password.getText().toString());
+                            db.userDao().updateUser(user);
+                            et_password.setText("");
+                            et_password_confirm.setText("");
+                        }
+                        else{
+                            toast.setText("Les mots de passe de concordent pas");
+                        }
+                    }
+                    else{
+                        toast.setText("Le mot de passe doit faire plus de 8 caractères");
+                    }
                 }
+                toast.show();
             }
         });
     }
