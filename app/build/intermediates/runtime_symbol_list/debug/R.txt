@@ -2719,6 +2719,7 @@ int id ratio 0x7f0901cd
 int id rectangles 0x7f0901ce
 int id recycler_date_sortie 0x7f0901cf
 int id recycler_image 0x7f0901d0
+int id recycler_item 0x7f090273
 int id recycler_title 0x7f0901d1
 int id recycler_view 0x7f0901d2
 int id reverseSawtooth 0x7f0901d3

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tmdb_project.Models.Movie;
@@ -25,13 +26,11 @@ import java.util.ArrayList;
 public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendViewHolder> {
 
     ArrayList<Movie> arrayMovie;
+    private final OnItemClickListener listener;
 
-    String data_title[], data_date[];
-    int img[];
-    Context context;
-
-    public TrendingAdapter(ArrayList<Movie> movies){
+    public TrendingAdapter(ArrayList<Movie> movies,OnItemClickListener listener){
         arrayMovie = movies;
+        this.listener = listener;
     }
 
     @NonNull
@@ -44,10 +43,20 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
 
     @Override
     public void onBindViewHolder(@NonNull TrendViewHolder holder, int position) {
-        holder.txt_title.setText(arrayMovie.get(position).name);
-        holder.txt_date_sortie.setText(arrayMovie.get(position).release_date);
-        Picasso.get().load(arrayMovie.get(position).poster_path).into(holder.img_miniature);
+        Movie movie = arrayMovie.get(position);
+
+        holder.txt_title.setText(movie.name);
+        holder.txt_date_sortie.setText(movie.release_date);
+        Picasso.get().load(movie.poster_path).into(holder.img_miniature);
+        //holder.itemView.setOnClickListener();
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onItemClick(movie);
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {
@@ -58,12 +67,14 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
 
         TextView txt_title, txt_date_sortie;
         ImageView img_miniature;
+        CardView cardView;
 
         public TrendViewHolder(@NonNull View itemView) {
             super(itemView);
             txt_title = itemView.findViewById(R.id.recycler_title);
             txt_date_sortie = itemView.findViewById(R.id.recycler_date_sortie);
             img_miniature = itemView.findViewById(R.id.recycler_image);
+            cardView = itemView.findViewById(R.id.recycler_item);
         }
     }
 }

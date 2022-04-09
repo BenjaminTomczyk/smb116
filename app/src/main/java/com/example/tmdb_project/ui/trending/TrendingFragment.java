@@ -30,6 +30,7 @@ import com.example.tmdb_project.AppActivity;
 import com.example.tmdb_project.MainActivity;
 //import com.example.tmdb_project.Movie;
 import com.example.tmdb_project.Models.Movie;
+import com.example.tmdb_project.OnItemClickListener;
 import com.example.tmdb_project.R;
 import com.example.tmdb_project.TrendingAdapter;
 import com.fasterxml.jackson.core.JsonParser;
@@ -49,7 +50,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class TrendingFragment extends Fragment {
+public class TrendingFragment extends Fragment implements OnItemClickListener{
 
     private RecyclerView trendingRecyclerView;
     private TrendingAdapter trendingAdapter;
@@ -76,9 +77,10 @@ public class TrendingFragment extends Fragment {
 
         arrayMovie = new ArrayList<Movie>();
 
-        trendingAdapter = new TrendingAdapter(arrayMovie);
+        trendingAdapter = new TrendingAdapter(arrayMovie,this);
         trendingRecyclerView.setAdapter(trendingAdapter);
         trendingRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
 
         try {
             GetRequestAPI();
@@ -90,52 +92,39 @@ public class TrendingFragment extends Fragment {
     }
 
     private void GetRequestAPI() throws JsonProcessingException {
-        Log.i("TEST :", "GetRequestAPI");
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, (Listener) response -> {
 
-            @Override
-            public void onResponse(Object response) {
+            try {
+                JSONObject jsonObject = new JSONObject(response.toString());
+                JSONArray jsonArray = jsonObject.getJSONArray("results");
 
-                try {
-                    JSONObject jsonObject = new JSONObject(response.toString());
-                    JSONArray jsonArray = jsonObject.getJSONArray("results");
+                for(int i = 0; i < jsonArray.length(); i++){
+                    JSONObject movieObject = jsonArray.getJSONObject(i);
 
-                    for(int i = 0; i < jsonArray.length(); i++){
-                        JSONObject movieObject = jsonArray.getJSONObject(i);
-
-                        String name = movieObject.getString("title");
-                        String release_date = movieObject.getString("release_date");
-                        String poster_path = movieObject.getString("poster_path");
+                    String name = movieObject.getString("title");
+                    String release_date = movieObject.getString("release_date");
+                    String poster_path = movieObject.getString("poster_path");
 
 
-                        Movie movie = new Movie();
-                        movie.name = name;
-                        movie.release_date = release_date;
-                        movie.poster_path = imgUrl + poster_path;
+                    Movie movie = new Movie();
+                    movie.name = name;
+                    movie.release_date = release_date;
+                    movie.poster_path = imgUrl + poster_path;
 
-                        arrayMovie.add(movie);
-                    }
-
-                    for(Movie mov : arrayMovie){
-                        Log.i("RESULT: ", mov.name + mov.release_date);
-                    }
-
-                    trendingAdapter.notifyDataSetChanged();
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                    arrayMovie.add(movie);
                 }
-            }
-        },
-        new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error){
-                Log.e("JSONObject: ", error.toString());
-            }
-        });
 
+                for(Movie mov : arrayMovie){
+                    Log.i("RESULT: ", mov.name + mov.release_date);
+                }
 
+                trendingAdapter.notifyDataSetChanged();
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        },error -> Log.e("JSONObject: ", error.toString()));
 
         queue.add(stringRequest);
     }
@@ -147,5 +136,10 @@ public class TrendingFragment extends Fragment {
         trendingRecyclerView.setAdapter(null);
         trendingAdapter = null;
         trendingRecyclerView = null;
+    }
+
+    @Override
+    public void onItemClick(Movie movie) {
+        Log.d("TEST","OnClickListener");
     }
 }

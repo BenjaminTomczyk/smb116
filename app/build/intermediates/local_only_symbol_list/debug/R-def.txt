@@ -50,6 +50,7 @@ id password_txt
 id password_txt_signup
 id recycler_date_sortie
 id recycler_image
+id recycler_item
 id recycler_title
 id signin_fragment
 id signin_label
