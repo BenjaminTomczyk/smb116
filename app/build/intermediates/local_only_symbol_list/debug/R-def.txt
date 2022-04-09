@@ -1,7 +1,5 @@
 R_DEF: Internal format may change without notice
 local
-array recyclerView_date_sortie
-array recyclerView_title
 color black
 color blue1
 color blue2
@@ -31,6 +29,8 @@ id B_take_picture
 id ET_password
 id ET_password_confirm
 id IV_avatar
+id ImageView_poster
+id button_back
 id connexion_btn
 id connexion_btn_signup
 id container
@@ -57,11 +57,16 @@ id signin_label
 id signup_fragment
 id signup_label
 id textView
+id textView_date
+id textView_overview
+id textView_score
+id textView_title
 id text_watching
 id trending_recycler_view
 id trending_search_view
 layout activity_app
 layout activity_main
+layout fragment_movie_details
 layout fragment_profil
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
@@ -80,6 +85,7 @@ string connexion
 string email
 string hello_blank_fragment
 string inscription
+string movie_details_back
 string new_password
 string password
 string save

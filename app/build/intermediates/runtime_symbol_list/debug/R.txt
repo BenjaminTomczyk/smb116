@@ -65,8 +65,6 @@ int animator nav_default_exit_anim 0x7f02001b
 int animator nav_default_pop_enter_anim 0x7f02001c
 int animator nav_default_pop_exit_anim 0x7f02001d
 int array car_ui_ime_wide_screen_allowed_package_list 0x7f030000
-int array recyclerView_date_sortie 0x7f030001
-int array recyclerView_title 0x7f030002
 int attr CarUiToolbarStyle 0x7f040000
 int attr ConstraintRotate 0x7f040001
 int attr SharedValue 0x7f040002
@@ -2265,6 +2263,7 @@ int id ET_password 0x7f090007
 int id ET_password_confirm 0x7f090008
 int id FUNCTION 0x7f090009
 int id IV_avatar 0x7f09000a
+int id ImageView_poster 0x7f090274
 int id META 0x7f09000b
 int id NO_DEBUG 0x7f09000c
 int id SHIFT 0x7f09000d
@@ -2373,6 +2372,7 @@ int id bounceBoth 0x7f090073
 int id bounceEnd 0x7f090074
 int id bounceStart 0x7f090075
 int id buttonPanel 0x7f090076
+int id button_back 0x7f090279
 int id cache_measures 0x7f090077
 int id cancel_action 0x7f090078
 int id cancel_button 0x7f090079
@@ -2831,6 +2831,10 @@ int id textSpacerNoTitle 0x7f09023c
 int id textStart 0x7f09023d
 int id textTop 0x7f09023e
 int id textView 0x7f09023f
+int id textView_date 0x7f090276
+int id textView_overview 0x7f090277
+int id textView_score 0x7f090278
+int id textView_title 0x7f090275
 int id text_input_end_icon 0x7f090240
 int id text_input_error_icon 0x7f090241
 int id text_input_start_icon 0x7f090242
@@ -3024,6 +3028,7 @@ int layout design_navigation_menu_item 0x7f0c005a
 int layout design_text_input_end_icon 0x7f0c005b
 int layout design_text_input_start_icon 0x7f0c005c
 int layout expand_button 0x7f0c005d
+int layout fragment_movie_details 0x7f0c00c2
 int layout fragment_profil 0x7f0c005e
 int layout fragment_sign_in_fragement 0x7f0c005f
 int layout fragment_sign_up_fragement 0x7f0c0060
@@ -3221,6 +3226,7 @@ int string material_timepicker_minute 0x7f120057
 int string material_timepicker_pm 0x7f120058
 int string material_timepicker_select_time 0x7f120059
 int string material_timepicker_text_input_mode_description 0x7f12005a
+int string movie_details_back 0x7f120098
 int string mtrl_badge_numberless_content_description 0x7f12005b
 int string mtrl_chip_close_icon_content_description 0x7f12005c
 int string mtrl_exceed_max_badge_number_content_description 0x7f12005d

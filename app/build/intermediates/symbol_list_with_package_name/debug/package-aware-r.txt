@@ -66,8 +66,6 @@ animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
 array car_ui_ime_wide_screen_allowed_package_list
-array recyclerView_date_sortie
-array recyclerView_title
 attr CarUiToolbarStyle
 attr ConstraintRotate
 attr SharedValue
@@ -2266,6 +2264,7 @@ id ET_password
 id ET_password_confirm
 id FUNCTION
 id IV_avatar
+id ImageView_poster
 id META
 id NO_DEBUG
 id SHIFT
@@ -2374,6 +2373,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id buttonPanel
+id button_back
 id cache_measures
 id cancel_action
 id cancel_button
@@ -2832,6 +2832,10 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView_date
+id textView_overview
+id textView_score
+id textView_title
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3025,6 +3029,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
+layout fragment_movie_details
 layout fragment_profil
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
@@ -3222,6 +3227,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string movie_details_back
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description

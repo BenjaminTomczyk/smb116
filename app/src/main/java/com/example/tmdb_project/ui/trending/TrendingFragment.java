@@ -2,53 +2,34 @@ package com.example.tmdb_project.ui.trending;
 
 import static com.android.volley.Response.*;
 
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.tmdb_project.AppActivity;
-import com.example.tmdb_project.MainActivity;
-//import com.example.tmdb_project.Movie;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.OnItemClickListener;
 import com.example.tmdb_project.R;
 import com.example.tmdb_project.TrendingAdapter;
-import com.fasterxml.jackson.core.JsonParser;
+import com.example.tmdb_project.ui.movie.MovieDetailsFragment;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 public class TrendingFragment extends Fragment implements OnItemClickListener{
 
@@ -105,12 +86,17 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
                     String name = movieObject.getString("title");
                     String release_date = movieObject.getString("release_date");
                     String poster_path = movieObject.getString("poster_path");
+                    Double vote_average = movieObject.getDouble("vote_average");
+                    String overview = movieObject.getString("overview");
 
 
                     Movie movie = new Movie();
                     movie.name = name;
                     movie.release_date = release_date;
                     movie.poster_path = imgUrl + poster_path;
+                    movie.vote_average = vote_average;
+                    movie.overview = overview;
+
 
                     arrayMovie.add(movie);
                 }
@@ -140,6 +126,22 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
 
     @Override
     public void onItemClick(Movie movie) {
-        Log.d("TEST","OnClickListener");
+        Log.d("TEST",movie.name);
+        //TODO lancer fragment_movie_details
+
+        FragmentTransaction ft =  getActivity().getSupportFragmentManager().beginTransaction();
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.setReorderingAllowed(true);
+
+        MovieDetailsFragment movieDetailsFragment = new MovieDetailsFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("clicked_movie", movie);
+        movieDetailsFragment.setArguments(bundle);
+
+        ft.replace(android.R.id.content, movieDetailsFragment);
+        ft.addToBackStack(null);
+
+        ft.commit();
     }
 }
