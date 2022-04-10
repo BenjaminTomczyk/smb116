@@ -57,10 +57,10 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
 
         public TrendViewHolder(@NonNull View itemView) {
             super(itemView);
-            txt_title = itemView.findViewById(R.id.recycler_title);
-            txt_date_sortie = itemView.findViewById(R.id.recycler_date_sortie);
-            img_miniature = itemView.findViewById(R.id.recycler_image);
-            cardView = itemView.findViewById(R.id.recycler_item);
+            txt_title = itemView.findViewById(R.id.trending_recycler_title);
+            txt_date_sortie = itemView.findViewById(R.id.trending_recycler_date_sortie);
+            img_miniature = itemView.findViewById(R.id.trending_recycler_image);
+            cardView = itemView.findViewById(R.id.trending_recycler_item);
         }
     }
 }

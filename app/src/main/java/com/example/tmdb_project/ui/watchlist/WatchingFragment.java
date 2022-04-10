@@ -1,31 +1,27 @@
 package com.example.tmdb_project.ui.watchlist;
 
-import android.app.ActionBar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
-import com.android.volley.RequestQueue;
 import com.example.tmdb_project.Data.AppDatabase;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.OnItemClickListener;
 import com.example.tmdb_project.R;
-import com.example.tmdb_project.TrendingAdapter;
 import com.example.tmdb_project.WatchingAdapter;
 import com.example.tmdb_project.databinding.FragmentWatchingBinding;
-import com.example.tmdb_project.ui.movie.MovieDetailsFragment;
+import com.example.tmdb_project.ui.movie.TrendingMovieDetailsFragment;
+import com.example.tmdb_project.ui.movie.WatchingMovieDetailsFragment;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class WatchingFragment extends Fragment implements OnItemClickListener {
 
@@ -47,14 +43,6 @@ public class WatchingFragment extends Fragment implements OnItemClickListener {
 
         db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
 
-        //TEST recycler view
-        /*Movie test = new Movie();
-        test.name = "test title";
-        test.release_date = "test date";
-        test.vote_average = 533.2;
-        test.overview = "test resume";
-        db.movieDao().insertMovie(test);*/
-        //
 
         Integer userId = getActivity().getSharedPreferences("MyPref", 0).getInt("userId", -1);
 
@@ -80,8 +68,8 @@ public class WatchingFragment extends Fragment implements OnItemClickListener {
 
         getActivity().getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
-                .replace(android.R.id.content, MovieDetailsFragment.class, args)
-                .addToBackStack(null)
+                .replace(android.R.id.content, WatchingMovieDetailsFragment.class, args)
+                .addToBackStack("watching")
                 .commit();
     }
 }

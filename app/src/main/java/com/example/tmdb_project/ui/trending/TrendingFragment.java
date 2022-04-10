@@ -9,8 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,12 +16,12 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.tmdb_project.Auth.SignInFragement;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.OnItemClickListener;
 import com.example.tmdb_project.R;
 import com.example.tmdb_project.TrendingAdapter;
-import com.example.tmdb_project.ui.movie.MovieDetailsFragment;
+import com.example.tmdb_project.ui.movie.TrendingMovieDetailsFragment;
+import com.example.tmdb_project.ui.movie.WatchingMovieDetailsFragment;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import org.json.JSONArray;
@@ -125,8 +123,8 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
 
         getActivity().getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
-                .replace(android.R.id.content, MovieDetailsFragment.class, args)
-                .addToBackStack(null)
+                .replace(android.R.id.content, TrendingMovieDetailsFragment.class, args)
+                .addToBackStack("trending")
                 .commit();
     }
 

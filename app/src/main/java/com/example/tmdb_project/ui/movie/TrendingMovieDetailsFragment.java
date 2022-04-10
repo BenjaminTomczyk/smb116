@@ -1,15 +1,9 @@
 package com.example.tmdb_project.ui.movie;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-
-import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.room.Room;
 
 import android.util.Log;
@@ -21,17 +15,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.tmdb_project.Auth.SignUpFragement;
 import com.example.tmdb_project.Data.AppDatabase;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.R;
-import com.example.tmdb_project.ui.trending.TrendingFragment;
-import com.example.tmdb_project.ui.watchlist.WatchingFragment;
 import com.squareup.picasso.Picasso;
 
-import java.util.List;
-
-public class MovieDetailsFragment extends Fragment {
+public class TrendingMovieDetailsFragment extends Fragment {
 
     private Movie movie;
     private Button back;
@@ -39,8 +28,8 @@ public class MovieDetailsFragment extends Fragment {
     private Button deleteWatchlistButton;
     private AppDatabase db;
 
-    public MovieDetailsFragment(){
-        super(R.layout.fragment_movie_details);
+    public TrendingMovieDetailsFragment(){
+        super(R.layout.fragment_trendings_movie_details);
     }
 
     @Override
@@ -48,7 +37,7 @@ public class MovieDetailsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_movie_details,container,false);
+        View view = inflater.inflate(R.layout.fragment_trendings_movie_details,container,false);
 
         TextView textView_title = view.findViewById(R.id.textView_title);
         TextView textView_date = view.findViewById(R.id.textView_date);
@@ -74,8 +63,8 @@ public class MovieDetailsFragment extends Fragment {
         textView_overview.setText(overview);
         Picasso.get().load(movie.backdrop_path).into(imageView_poster);
 
-        back = view.findViewById(R.id.button_back);
-        back.setOnClickListener(view12 -> getActivity().getSupportFragmentManager().popBackStack());
+        back = view.findViewById(R.id.button_back_trending);
+        back.setOnClickListener(view12 -> getActivity().getSupportFragmentManager().popBackStack("trending",1));
 
         addWatchlistButton = view.findViewById(R.id.button_add_watchlist);
         deleteWatchlistButton = view.findViewById(R.id.button_delete_watchlist);
@@ -117,5 +106,4 @@ public class MovieDetailsFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
     }
-
 }

@@ -29,7 +29,7 @@ public class WatchingAdapter extends RecyclerView.Adapter<WatchingAdapter.Watchi
     @Override
     public WatchingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.trending_recycler_view_item, parent, false);
+        View view = inflater.inflate(R.layout.watching_recycler_view_item, parent, false);
         return new WatchingViewHolder(view);
     }
 
@@ -57,10 +57,10 @@ public class WatchingAdapter extends RecyclerView.Adapter<WatchingAdapter.Watchi
 
         public WatchingViewHolder(@NonNull View itemView) {
             super(itemView);
-            txt_title = itemView.findViewById(R.id.recycler_title);
-            txt_date_sortie = itemView.findViewById(R.id.recycler_date_sortie);
-            img_miniature = itemView.findViewById(R.id.recycler_image);
-            cardView = itemView.findViewById(R.id.recycler_item);
+            txt_title = itemView.findViewById(R.id.watching_recycler_title);
+            txt_date_sortie = itemView.findViewById(R.id.watching_recycler_date_sortie);
+            img_miniature = itemView.findViewById(R.id.watching_recycler_image);
+            cardView = itemView.findViewById(R.id.watching_recycler_item);
         }
     }
 }

@@ -2374,7 +2374,8 @@ id bounceEnd
 id bounceStart
 id buttonPanel
 id button_add_watchlist
-id button_back
+id button_back_trending
+id button_back_watching
 id button_delete_watchlist
 id cache_measures
 id cancel_action
@@ -2607,6 +2608,7 @@ id legacy
 id line1
 id line3
 id linear
+id linear_layout_buttons
 id linear_layout_date_score
 id list
 id listMode
@@ -2721,10 +2723,6 @@ id radio
 id radio_button
 id ratio
 id rectangles
-id recycler_date_sortie
-id recycler_image
-id recycler_item
-id recycler_title
 id recycler_view
 id reverseSawtooth
 id right
@@ -2864,6 +2862,10 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trending_recycler_date_sortie
+id trending_recycler_image
+id trending_recycler_item
+id trending_recycler_title
 id trending_recycler_view
 id trending_search_view
 id triangle
@@ -2880,6 +2882,10 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id watching_recycler_date_sortie
+id watching_recycler_image
+id watching_recycler_item
+id watching_recycler_title
 id watching_recycler_view
 id west
 id withText
@@ -3032,12 +3038,13 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
-layout fragment_movie_details
 layout fragment_profil
 layout fragment_sign_in_fragement
 layout fragment_sign_up_fragement
 layout fragment_trending
+layout fragment_trendings_movie_details
 layout fragment_watching
+layout fragment_watching_movie_details
 layout image_frame
 layout material_chip_input_combo
 layout material_clock_display
@@ -3133,6 +3140,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout trending_recycler_view_item
+layout watching_recycler_view_item
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
