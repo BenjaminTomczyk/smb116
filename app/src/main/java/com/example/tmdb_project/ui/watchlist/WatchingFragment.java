@@ -12,8 +12,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import com.android.volley.RequestQueue;
+import com.example.tmdb_project.Data.AppDatabase;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.OnItemClickListener;
 import com.example.tmdb_project.R;
@@ -23,12 +25,15 @@ import com.example.tmdb_project.databinding.FragmentWatchingBinding;
 import com.example.tmdb_project.ui.movie.MovieDetailsFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class WatchingFragment extends Fragment implements OnItemClickListener {
 
     private FragmentWatchingBinding binding;
     private RecyclerView watchingRecyclerView;
     private WatchingAdapter watchingAdapter;
+
+    private AppDatabase db;
 
     private ArrayList<Movie> arrayMovie;
 
@@ -40,16 +45,20 @@ public class WatchingFragment extends Fragment implements OnItemClickListener {
         View view = inflater.inflate(R.layout.fragment_watching,container,false);
         watchingRecyclerView = view.findViewById(R.id.watching_recycler_view);
 
-        arrayMovie = new ArrayList<Movie>();
+        db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
 
         //TEST recycler view
-        Movie test = new Movie();
+        /*Movie test = new Movie();
         test.name = "test title";
         test.release_date = "test date";
         test.vote_average = 533.2;
         test.overview = "test resume";
-        arrayMovie.add(test);
+        db.movieDao().insertMovie(test);*/
         //
+
+        Integer userId = getActivity().getSharedPreferences("MyPref", 0).getInt("userId", -1);
+
+        arrayMovie = new ArrayList<Movie>(db.movieDao().getAll(userId));
 
         watchingAdapter = new WatchingAdapter(arrayMovie,this);
         watchingRecyclerView.setAdapter(watchingAdapter);

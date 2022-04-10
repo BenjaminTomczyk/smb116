@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.tmdb_project.AppActivity;
 import com.example.tmdb_project.Data.AppDatabase;
+import com.example.tmdb_project.Models.User;
 import com.example.tmdb_project.R;
 
 /**
@@ -119,8 +120,11 @@ public class SignInFragement extends Fragment {
                         SharedPreferences pref = getActivity().getApplicationContext().getSharedPreferences("MyPref", 0);
                         SharedPreferences.Editor editor = pref.edit();
 
+                        User user = db.userDao().loadByEmail(emailInput.getText().toString());
+
                         editor.putString("email", emailInput.getText().toString());
                         editor.putString("password", passwordInput.getText().toString());
+                        editor.putInt("userId", user.getId());
                         editor.commit();
 
                         //TODO : Connection

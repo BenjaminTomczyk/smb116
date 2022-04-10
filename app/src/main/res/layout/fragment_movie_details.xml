@@ -109,6 +109,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/button_add_watchlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_watchlist_button" />
+
+            <Button
+                android:id="@+id/button_delete_watchlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_watchlist_button" />
         </LinearLayout>
     </ScrollView>
 

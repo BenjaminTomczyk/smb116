@@ -1,7 +1,6 @@
 package com.example.tmdb_project.ui.profil;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,9 +19,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
-import com.example.tmdb_project.AppActivity;
 import com.example.tmdb_project.Data.AppDatabase;
-import com.example.tmdb_project.Data.User;
+import com.example.tmdb_project.Models.User;
 import com.example.tmdb_project.R;
 import com.example.tmdb_project.databinding.FragmentProfilBinding;
 

@@ -30,7 +30,9 @@ id ET_password
 id ET_password_confirm
 id IV_avatar
 id ImageView_poster
+id button_add_watchlist
 id button_back
+id button_delete_watchlist
 id connexion_btn
 id connexion_btn_signup
 id container
@@ -79,11 +81,13 @@ menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
+string add_watchlist_button
 string app_name
 string change_password
 string choose_picture
 string confirm_new_password
 string connexion
+string delete_watchlist_button
 string email
 string hello_blank_fragment
 string inscription

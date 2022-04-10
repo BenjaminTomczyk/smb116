@@ -2,10 +2,8 @@ package com.example.tmdb_project;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.tmdb_project.Data.AppDatabase;
-import com.example.tmdb_project.Data.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;

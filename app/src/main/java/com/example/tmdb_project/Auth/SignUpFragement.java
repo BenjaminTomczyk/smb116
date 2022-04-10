@@ -8,7 +8,6 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.room.Room;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,13 +18,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tmdb_project.Data.AppDatabase;
-import com.example.tmdb_project.Data.User;
+import com.example.tmdb_project.Models.User;
 import com.example.tmdb_project.R;
 
-import java.io.Console;
-import java.time.LocalDateTime;
 import java.util.Calendar;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.

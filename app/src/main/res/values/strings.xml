@@ -21,4 +21,6 @@
     <string name="title_profil">Profil</string>
     <string name="trending_searchbar_hint">SEARCH</string>
     <string name="movie_details_back">&lt;</string>
+    <string name="add_watchlist_button">Ajouter à ma Watchlist</string>
+    <string name="delete_watchlist_button">Supprimer de ma Watchlist</string>
 </resources>

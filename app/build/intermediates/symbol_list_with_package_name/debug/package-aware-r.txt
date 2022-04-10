@@ -2373,7 +2373,9 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id buttonPanel
+id button_add_watchlist
 id button_back
+id button_delete_watchlist
 id cache_measures
 id cancel_action
 id cancel_button
@@ -3164,6 +3166,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_watchlist_button
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -3197,6 +3200,7 @@ string clear_text_end_icon_content_description
 string confirm_new_password
 string connexion
 string copy
+string delete_watchlist_button
 string email
 string error_icon_content_description
 string expand_button_title

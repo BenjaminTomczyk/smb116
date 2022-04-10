@@ -13,11 +13,13 @@
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="add_watchlist_button">Ajouter à ma Watchlist</string>
     <string name="app_name">tmdb_project</string>
     <string name="change_password">Changer de mot de passe</string>
     <string name="choose_picture">Choisir une photo</string>
     <string name="confirm_new_password">Confirmation nouveau mot de passe</string>
     <string name="connexion">Connexion</string>
+    <string name="delete_watchlist_button">Supprimer de ma Watchlist</string>
     <string name="email">Email</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="inscription">Inscription</string>

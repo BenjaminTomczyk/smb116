@@ -8,6 +8,7 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
+import com.example.tmdb_project.Models.User;
 import java.lang.Class;
 import java.lang.Integer;
 import java.lang.Long;
@@ -31,56 +32,54 @@ public final class UserDao_Impl implements UserDao {
     this.__insertionAdapterOfUser = new EntityInsertionAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `user` (`email`,`password`,`birthdate`) VALUES (?,?,?)";
+        return "INSERT OR ABORT INTO `user` (`id`,`email`,`password`,`birthdate`) VALUES (nullif(?, 0),?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, User value) {
+        stmt.bindLong(1, value.id);
         if (value.getEmail() == null) {
-          stmt.bindNull(1);
-        } else {
-          stmt.bindString(1, value.getEmail());
-        }
-        if (value.getPassword() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getPassword());
+          stmt.bindString(2, value.getEmail());
         }
-        if (value.getBirthdate() == null) {
+        if (value.getPassword() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindLong(3, value.getBirthdate());
+          stmt.bindString(3, value.getPassword());
+        }
+        if (value.getBirthdate() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindLong(4, value.getBirthdate());
         }
       }
     };
     this.__updateAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `user` SET `email` = ?,`password` = ?,`birthdate` = ? WHERE `email` = ?";
+        return "UPDATE OR ABORT `user` SET `id` = ?,`email` = ?,`password` = ?,`birthdate` = ? WHERE `id` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, User value) {
+        stmt.bindLong(1, value.id);
         if (value.getEmail() == null) {
-          stmt.bindNull(1);
-        } else {
-          stmt.bindString(1, value.getEmail());
-        }
-        if (value.getPassword() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getPassword());
+          stmt.bindString(2, value.getEmail());
         }
-        if (value.getBirthdate() == null) {
+        if (value.getPassword() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindLong(3, value.getBirthdate());
+          stmt.bindString(3, value.getPassword());
         }
-        if (value.getEmail() == null) {
+        if (value.getBirthdate() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getEmail());
+          stmt.bindLong(4, value.getBirthdate());
         }
+        stmt.bindLong(5, value.id);
       }
     };
   }
@@ -116,6 +115,7 @@ public final class UserDao_Impl implements UserDao {
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
       final int _cursorIndexOfPassword = CursorUtil.getColumnIndexOrThrow(_cursor, "password");
       final int _cursorIndexOfBirthdate = CursorUtil.getColumnIndexOrThrow(_cursor, "birthdate");
@@ -123,6 +123,7 @@ public final class UserDao_Impl implements UserDao {
       while(_cursor.moveToNext()) {
         final User _item;
         _item = new User();
+        _item.id = _cursor.getInt(_cursorIndexOfId);
         final String _tmpEmail;
         if (_cursor.isNull(_cursorIndexOfEmail)) {
           _tmpEmail = null;
@@ -166,12 +167,14 @@ public final class UserDao_Impl implements UserDao {
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
       final int _cursorIndexOfPassword = CursorUtil.getColumnIndexOrThrow(_cursor, "password");
       final int _cursorIndexOfBirthdate = CursorUtil.getColumnIndexOrThrow(_cursor, "birthdate");
       final User _result;
       if(_cursor.moveToFirst()) {
         _result = new User();
+        _result.id = _cursor.getInt(_cursorIndexOfId);
         final String _tmpEmail;
         if (_cursor.isNull(_cursorIndexOfEmail)) {
           _tmpEmail = null;
