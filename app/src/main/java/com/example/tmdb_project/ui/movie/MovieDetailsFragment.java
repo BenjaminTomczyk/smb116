@@ -12,12 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.tmdb_project.Auth.SignUpFragement;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.R;
 import com.example.tmdb_project.ui.trending.TrendingFragment;
+import com.squareup.picasso.Picasso;
 
 public class MovieDetailsFragment extends Fragment {
 
@@ -39,21 +41,24 @@ public class MovieDetailsFragment extends Fragment {
         TextView textView_date = view.findViewById(R.id.textView_date);
         TextView textView_score = view.findViewById(R.id.textView_score);
         TextView textView_overview = view.findViewById(R.id.textView_overview);
+        ImageView imageView_poster = view.findViewById(R.id.ImageView_poster);
 
         Bundle bundle = getArguments();
         Movie movie = (Movie) bundle.getSerializable("clicked_movie");
 
         this.movie = movie;
 
-        String title = "Titre\n\n" + movie.name;
-        String date = "Date de sortie\n\n" + movie.release_date;
-        String score = "Note moyenne\n\n" + movie.vote_average;
-        String overview = "Résumé\n\n" + movie.overview;
+        String title = "TITRE\n\n" + movie.name;
+        String date = "DATE DE SORTIE\n\n" + movie.release_date;
+        String score = "NOTE MOYENNE\n\n" + movie.vote_average + " / 10";
+        String overview = "RESUME\n\n" + movie.overview;
 
         textView_title.setText(title);
         textView_date.setText(date);
         textView_score.setText(score);
         textView_overview.setText(overview);
+        Picasso.get().load(movie.backdrop_path).into(imageView_poster);
+
 
         back = view.findViewById(R.id.button_back);
         back.setOnClickListener(view1 -> getActivity().getSupportFragmentManager().beginTransaction()

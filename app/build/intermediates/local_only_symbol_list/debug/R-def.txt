@@ -40,6 +40,7 @@ id fragment_container_view_auth
 id id_txt
 id imageView
 id imageView2
+id linear_layout_date_score
 id mobile_navigation
 id nav_host_fragment_activity_app
 id nav_view
@@ -52,6 +53,7 @@ id recycler_date_sortie
 id recycler_image
 id recycler_item
 id recycler_title
+id scrollView2
 id signin_fragment
 id signin_label
 id signup_fragment
@@ -86,6 +88,10 @@ string email
 string hello_blank_fragment
 string inscription
 string movie_details_back
+string movie_details_date
+string movie_details_overview
+string movie_details_score
+string movie_details_title
 string new_password
 string password
 string save

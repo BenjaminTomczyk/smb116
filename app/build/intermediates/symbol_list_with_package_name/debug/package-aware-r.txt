@@ -2605,6 +2605,7 @@ id legacy
 id line1
 id line3
 id linear
+id linear_layout_date_score
 id list
 id listMode
 id list_item
@@ -2739,6 +2740,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollView2
 id scrollable
 id search
 id search_badge
@@ -3228,6 +3230,10 @@ string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string movie_details_back
+string movie_details_date
+string movie_details_overview
+string movie_details_score
+string movie_details_title
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description

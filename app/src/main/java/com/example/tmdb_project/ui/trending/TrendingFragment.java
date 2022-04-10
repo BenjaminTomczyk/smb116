@@ -88,6 +88,7 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
                     String poster_path = movieObject.getString("poster_path");
                     Double vote_average = movieObject.getDouble("vote_average");
                     String overview = movieObject.getString("overview");
+                    String backdrop_path = movieObject.getString("backdrop_path");
 
 
                     Movie movie = new Movie();
@@ -96,6 +97,7 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
                     movie.poster_path = imgUrl + poster_path;
                     movie.vote_average = vote_average;
                     movie.overview = overview;
+                    movie.backdrop_path = imgUrl + backdrop_path;
 
 
                     arrayMovie.add(movie);

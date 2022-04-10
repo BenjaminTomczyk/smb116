@@ -23,4 +23,7 @@ public class Movie implements Serializable {
     @JsonProperty("overview")
     public String overview;
 
+    @JsonProperty("backdrop_path")
+    public String backdrop_path;
+
 }
