@@ -1,7 +1,10 @@
 package com.example.tmdb_project.ui.movie;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -59,13 +62,8 @@ public class MovieDetailsFragment extends Fragment {
         textView_overview.setText(overview);
         Picasso.get().load(movie.backdrop_path).into(imageView_poster);
 
-
         back = view.findViewById(R.id.button_back);
-        back.setOnClickListener(view1 -> getActivity().getSupportFragmentManager().beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(android.R.id.content, TrendingFragment.class, null)
-                .addToBackStack(null)
-                .commit());
+        back.setOnClickListener(view12 -> getActivity().getSupportFragmentManager().popBackStack());
 
         return view;
     }

@@ -53,7 +53,7 @@ id recycler_date_sortie
 id recycler_image
 id recycler_item
 id recycler_title
-id scrollView2
+id scrollView
 id signin_fragment
 id signin_label
 id signup_fragment
@@ -63,9 +63,9 @@ id textView_date
 id textView_overview
 id textView_score
 id textView_title
-id text_watching
 id trending_recycler_view
 id trending_search_view
+id watching_recycler_view
 layout activity_app
 layout activity_main
 layout fragment_movie_details
@@ -88,10 +88,6 @@ string email
 string hello_blank_fragment
 string inscription
 string movie_details_back
-string movie_details_date
-string movie_details_overview
-string movie_details_score
-string movie_details_title
 string new_password
 string password
 string save

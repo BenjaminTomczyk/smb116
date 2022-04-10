@@ -11,6 +11,7 @@
         <entry key="..\:/COURS/M1/SMB116 Projet/smb116/app/src/main/res/layout/trending_recycler_view_item.xml" value="0.2056159420289855" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/trending_icon.xml" value="0.204" />
         <entry key="app/src/main/res/layout/activity_app.xml" value="0.1766304347826087" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12208713272543059" />
         <entry key="app/src/main/res/layout/fragment_movie_details.xml" value="0.29908294677734376" />
@@ -20,7 +21,10 @@
         <entry key="app/src/main/res/layout/fragment_trending.xml" value="0.25879825333089934" />
         <entry key="app/src/main/res/layout/fragment_trending_fragment.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_trending_page_fragment.xml" value="0.19798889160156252" />
+        <entry key="app/src/main/res/layout/fragment_watch_list.xml" value="0.1766304347826087" />
+        <entry key="app/src/main/res/layout/fragment_watching.xml" value="0.1766304347826087" />
         <entry key="app/src/main/res/layout/trending_recycler_view_item.xml" value="0.37772437938745473" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.25104166666666666" />
       </map>
     </option>
   </component>

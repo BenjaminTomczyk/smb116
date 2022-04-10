@@ -2739,7 +2739,6 @@ int id scroll 0x7f0901e5
 int id scrollIndicatorDown 0x7f0901e6
 int id scrollIndicatorUp 0x7f0901e7
 int id scrollView 0x7f0901e8
-int id scrollView2 0x7f0901e9
 int id scrollable 0x7f0901ea
 int id search 0x7f0901eb
 int id search_badge 0x7f0901ec
@@ -2840,7 +2839,6 @@ int id textView_title 0x7f09024d
 int id text_input_end_icon 0x7f09024f
 int id text_input_error_icon 0x7f090250
 int id text_input_start_icon 0x7f090251
-int id text_watching 0x7f090252
 int id textbox 0x7f090253
 int id textinput_counter 0x7f090254
 int id textinput_error 0x7f090255
@@ -2879,6 +2877,7 @@ int id view_tree_saved_state_registry_owner 0x7f090275
 int id view_tree_view_model_store_owner 0x7f090276
 int id visible 0x7f090277
 int id visible_removing_fragment_view_tag 0x7f090278
+int id watching_recycler_view 0x7f090282
 int id west 0x7f090279
 int id withText 0x7f09027a
 int id withinBounds 0x7f09027b
@@ -3229,10 +3228,6 @@ int string material_timepicker_pm 0x7f120058
 int string material_timepicker_select_time 0x7f120059
 int string material_timepicker_text_input_mode_description 0x7f12005a
 int string movie_details_back 0x7f12005b
-int string movie_details_date 0x7f12005c
-int string movie_details_overview 0x7f12005d
-int string movie_details_score 0x7f12005e
-int string movie_details_title 0x7f12005f
 int string mtrl_badge_numberless_content_description 0x7f120060
 int string mtrl_chip_close_icon_content_description 0x7f120061
 int string mtrl_exceed_max_badge_number_content_description 0x7f120062

@@ -2740,7 +2740,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
 id scrollable
 id search
 id search_badge
@@ -2841,7 +2840,6 @@ id textView_title
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_watching
 id textbox
 id textinput_counter
 id textinput_error
@@ -2880,6 +2878,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id watching_recycler_view
 id west
 id withText
 id withinBounds
@@ -3230,10 +3229,6 @@ string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string movie_details_back
-string movie_details_date
-string movie_details_overview
-string movie_details_score
-string movie_details_title
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description

@@ -18,6 +18,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.tmdb_project.Auth.SignInFragement;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.OnItemClickListener;
 import com.example.tmdb_project.R;
@@ -118,32 +119,23 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
     }
 
     @Override
+    public void onItemClick(Movie movie) {
+        Bundle args = new Bundle();
+        args.putSerializable("clicked_movie", movie);
+
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(android.R.id.content, MovieDetailsFragment.class, args)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
 
         trendingRecyclerView.setAdapter(null);
         trendingAdapter = null;
         trendingRecyclerView = null;
-    }
-
-    @Override
-    public void onItemClick(Movie movie) {
-        Log.d("TEST",movie.name);
-        //TODO lancer fragment_movie_details
-
-        FragmentTransaction ft =  getActivity().getSupportFragmentManager().beginTransaction();
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        ft.setReorderingAllowed(true);
-
-        MovieDetailsFragment movieDetailsFragment = new MovieDetailsFragment();
-
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("clicked_movie", movie);
-        movieDetailsFragment.setArguments(bundle);
-
-        ft.replace(android.R.id.content, movieDetailsFragment);
-        ft.addToBackStack(null);
-
-        ft.commit();
     }
 }

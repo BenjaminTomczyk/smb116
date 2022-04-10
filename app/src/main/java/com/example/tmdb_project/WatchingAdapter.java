@@ -15,26 +15,26 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendViewHolder> {
+public class WatchingAdapter extends RecyclerView.Adapter<WatchingAdapter.WatchingViewHolder> {
 
     ArrayList<Movie> arrayMovie;
     private final OnItemClickListener listener;
 
-    public TrendingAdapter(ArrayList<Movie> movies,OnItemClickListener listener){
+    public WatchingAdapter(ArrayList<Movie> movies,OnItemClickListener listener){
         arrayMovie = movies;
         this.listener = listener;
     }
 
     @NonNull
     @Override
-    public TrendViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public WatchingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.trending_recycler_view_item, parent, false);
-        return new TrendViewHolder(view);
+        return new WatchingViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TrendViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull WatchingViewHolder holder, int position) {
         Movie movie = arrayMovie.get(position);
 
         holder.txt_title.setText(movie.name);
@@ -49,13 +49,13 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
         return arrayMovie.size();
     }
 
-    public class TrendViewHolder extends RecyclerView.ViewHolder{
+    public class WatchingViewHolder extends RecyclerView.ViewHolder{
 
         TextView txt_title, txt_date_sortie;
         ImageView img_miniature;
         CardView cardView;
 
-        public TrendViewHolder(@NonNull View itemView) {
+        public WatchingViewHolder(@NonNull View itemView) {
             super(itemView);
             txt_title = itemView.findViewById(R.id.recycler_title);
             txt_date_sortie = itemView.findViewById(R.id.recycler_date_sortie);
