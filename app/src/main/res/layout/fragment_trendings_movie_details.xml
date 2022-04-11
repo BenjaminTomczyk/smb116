@@ -18,12 +18,19 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button_back_trending"
-                android:layout_width="wrap_content"
+                android:id="@+id/share_button"
+                android:layout_width="58dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                app:icon="@android:drawable/ic_menu_share" />
+
+            <Button
+                android:id="@+id/button_back_trending"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="@string/movie_details_back" />
+                android:layout_marginTop="16dp"
+                app:icon="@drawable/ic_baseline_keyboard_backspace_24"
+                tools:text=" " />
 
             <ImageView
                 android:id="@+id/ImageView_poster"
@@ -125,7 +132,7 @@
 
                 <Button
                     android:id="@+id/button_add_watchlist"
-                    android:layout_width="130dp"
+                    android:layout_width="293dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
@@ -136,20 +143,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/button_delete_watchlist"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/delete_watchlist_button"
-                    android:textAlignment="center"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button_add_watchlist"
-                    app:layout_constraintTop_toTopOf="parent" />
-
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

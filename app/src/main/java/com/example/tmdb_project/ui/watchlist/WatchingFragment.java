@@ -1,12 +1,15 @@
 package com.example.tmdb_project.ui.watchlist;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,7 +28,8 @@ import java.util.ArrayList;
 
 public class WatchingFragment extends Fragment implements OnItemClickListener {
 
-    private FragmentWatchingBinding binding;
+    private static WatchingFragment instance = null;
+
     private RecyclerView watchingRecyclerView;
     private WatchingAdapter watchingAdapter;
 
@@ -38,6 +42,8 @@ public class WatchingFragment extends Fragment implements OnItemClickListener {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        instance = this;
+
         View view = inflater.inflate(R.layout.fragment_watching,container,false);
         watchingRecyclerView = view.findViewById(R.id.watching_recycler_view);
 
@@ -58,7 +64,10 @@ public class WatchingFragment extends Fragment implements OnItemClickListener {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
+
+        watchingRecyclerView.setAdapter(null);
+        watchingAdapter = null;
+        watchingRecyclerView = null;
     }
 
     @Override
@@ -71,5 +80,18 @@ public class WatchingFragment extends Fragment implements OnItemClickListener {
                 .replace(android.R.id.content, WatchingMovieDetailsFragment.class, args)
                 .addToBackStack("watching")
                 .commit();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+    }
+
+    public static WatchingFragment createNewInstance(){
+        return new WatchingFragment();
+    }
+
+    public static FragmentManager getFragManager(){
+        return instance.getChildFragmentManager();
     }
 }

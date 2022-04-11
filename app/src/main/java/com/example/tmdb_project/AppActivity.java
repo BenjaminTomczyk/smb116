@@ -2,6 +2,7 @@ package com.example.tmdb_project;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.tmdb_project.Data.AppDatabase;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -52,5 +53,10 @@ public class AppActivity extends AppCompatActivity {
         super.onStart();
 
         db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "smb116_db").allowMainThreadQueries().build();
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
     }
 }

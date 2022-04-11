@@ -1,12 +1,16 @@
 package com.example.tmdb_project.ui.movie;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.room.Room;
 
 import android.util.Log;
@@ -18,15 +22,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tmdb_project.Auth.SignUpFragement;
 import com.example.tmdb_project.Data.AppDatabase;
 import com.example.tmdb_project.Models.Movie;
 import com.example.tmdb_project.R;
+import com.example.tmdb_project.ui.watchlist.WatchingFragment;
 import com.squareup.picasso.Picasso;
 
 public class WatchingMovieDetailsFragment extends Fragment {
 
     private Movie movie;
     private Button back;
+    private Button shareButton;
 
     private Button deleteWatchlistButton;
     private AppDatabase db;
@@ -66,8 +73,34 @@ public class WatchingMovieDetailsFragment extends Fragment {
         textView_overview.setText(overview);
         Picasso.get().load(movie.backdrop_path).into(imageView_poster);
 
+        shareButton = view.findViewById(R.id.share_button2);
         back = view.findViewById(R.id.button_back_watching);
-        back.setOnClickListener(view12 -> getActivity().getSupportFragmentManager().popBackStack("watching",1));
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment navHostFragment = (NavHostFragment) getActivity().getSupportFragmentManager().getPrimaryNavigationFragment();
+                FragmentManager manager = navHostFragment.getChildFragmentManager();
+                WatchingFragment wf = WatchingFragment.createNewInstance();
+
+                manager.beginTransaction().replace(navHostFragment.getId(), wf).commitAllowingStateLoss();
+
+                getActivity().getSupportFragmentManager().popBackStack("watching",1);
+            }
+        });
+
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Le film \"" + movie.name + "\" est incroyable ! Il faut absolument que tu le regarde !");
+                shareIntent.setType("text/plain");
+
+                startActivity(shareIntent);
+            }
+        });
 
 
         deleteWatchlistButton = view.findViewById(R.id.button_delete_watchlist);

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class WatchingAdapter extends RecyclerView.Adapter<WatchingAdapter.WatchingViewHolder> {
 
-    ArrayList<Movie> arrayMovie;
+    public ArrayList<Movie> arrayMovie;
     private final OnItemClickListener listener;
 
     public WatchingAdapter(ArrayList<Movie> movies,OnItemClickListener listener){
