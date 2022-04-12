@@ -43,6 +43,9 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
         holder.cardView.setOnClickListener(view -> listener.onItemClick(movie));
     }
 
+    public void setArrayMovie(ArrayList<Movie> arrayMovie){
+        this.arrayMovie = arrayMovie;
+    }
 
     @Override
     public int getItemCount() {
@@ -63,4 +66,6 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendV
             cardView = itemView.findViewById(R.id.trending_recycler_item);
         }
     }
+
+
 }

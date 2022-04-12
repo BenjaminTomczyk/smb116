@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,14 +30,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class TrendingFragment extends Fragment implements OnItemClickListener{
 
     private RecyclerView trendingRecyclerView;
     private TrendingAdapter trendingAdapter;
     private RequestQueue queue;
+    private SearchView sv;
 
     private ArrayList<Movie> arrayMovie;
+    private ArrayList<Movie> filterArrayMovie;
 
     private static String key = "2b275544b21406e66bc5310fb0bbb38a";
     private static String url = "https://api.themoviedb.org/3/trending/movie/week?api_key="+key;
@@ -53,17 +57,34 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_trending,container,false);
         trendingRecyclerView = view.findViewById(R.id.trending_recycler_view);
+        sv = view.findViewById(R.id.trending_search_view);
         queue = Volley.newRequestQueue(view.getContext());
 
         arrayMovie = new ArrayList<Movie>();
+        filterArrayMovie = new ArrayList<Movie>();
 
-        trendingAdapter = new TrendingAdapter(arrayMovie,this);
+        trendingAdapter = new TrendingAdapter(filterArrayMovie,this);
         trendingRecyclerView.setAdapter(trendingAdapter);
         trendingRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
+        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                filter(s);
+                trendingAdapter.notifyDataSetChanged();
+                return false;
+            }
+        });
 
 
         try {
             GetRequestAPI();
+
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -89,7 +110,6 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
                     String overview = movieObject.getString("overview");
                     String backdrop_path = movieObject.getString("backdrop_path");
 
-
                     Movie movie = new Movie();
                     movie.name = name;
                     movie.release_date = release_date;
@@ -100,10 +120,7 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
 
 
                     arrayMovie.add(movie);
-                }
-
-                for(Movie mov : arrayMovie){
-                    Log.i("RESULT: ", mov.name + mov.release_date);
+                    filterArrayMovie.add(movie);
                 }
 
                 trendingAdapter.notifyDataSetChanged();
@@ -135,5 +152,17 @@ public class TrendingFragment extends Fragment implements OnItemClickListener{
         trendingRecyclerView.setAdapter(null);
         trendingAdapter = null;
         trendingRecyclerView = null;
+    }
+
+    private void filter(String s) {
+        filterArrayMovie = new ArrayList<Movie>();
+        for(Movie movie : arrayMovie){
+            if(movie.name.toLowerCase().contains(s.toLowerCase())){
+                filterArrayMovie.add(movie);
+            }
+        }
+
+        trendingAdapter.setArrayMovie(filterArrayMovie);
+        trendingAdapter.notifyDataSetChanged();
     }
 }

@@ -2,6 +2,7 @@ package com.example.tmdb_project;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.tmdb_project.Data.AppDatabase;
